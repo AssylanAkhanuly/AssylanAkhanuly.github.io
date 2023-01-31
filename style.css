@@ -1,0 +1,69 @@
+header {
+    position: relative;
+    background-image: url("./photo.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+header::after {
+    content: 'Assylan Akhanuly';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+ul {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    background-color: rgb(242, 254, 66);
+    padding: 2px;
+    transition: 0.2s;
+
+}
+
+a:visited {
+    background-color: red;
+}
+a:hover {
+    background-color: rgb(209, 255, 3);
+}
+a:active {
+    background-color: green;
+}
+
+
+.link {
+    margin: auto;
+    text-align: center;
+    border: 1px solid #000;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+#main-title {
+    font: 24px Arial, Helvetica, sans-serif;
+    vertical-align: top;
+}
+
+p[name="first-text"] {
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
+    
+p[name="second-text"] {
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
