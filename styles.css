@@ -34,6 +34,7 @@ body {
   background-color: #ffff8f;
   opacity: 0.7;
   transition: 0.2s;
+  padding: 2px;
 }
 
 .topbar-item:hover {
@@ -44,7 +45,7 @@ body {
   margin-top: 10px;
   width: 100%;
   position: relative;
-  height: calc(100vh - 45px);
+  height: fit-content;
 }
 
 .main-title {
@@ -61,11 +62,37 @@ body {
 .main-img {
   display: block;
   margin: auto;
+  width: 100%;
+  height: auto;
 }
 
 .main-text {
   margin: 10px 50px;
   text-align: center;
+  vertical-align: top;
   color: #000;
-  font-size: 18px;
+  font: 18px 'Courier New', Courier, monospace;
+  border: 1px solid #000;
+}
+
+
+li[name="selected"] {
+  background-color: #f5f52f;
+}
+
+#banner {
+  height: 90vh;
+  background-image: url("./atyrau_img.jpg");
+  background-repeat: none ;
+  fill: cover;
+}
+
+#photo {
+  display: block;
+  width: 400px;
+  height: 600px;
+  background-image: url("./photo.jpg");
+  background-repeat: none;
+  background-size: cover;
+
 }
