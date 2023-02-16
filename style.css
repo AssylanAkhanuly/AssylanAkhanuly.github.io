@@ -1,6 +1,67 @@
-header {
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+    min-height: 60vh;
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 50%;
+    background: #ccc;
+    padding: 20px;
+    min-height: 30vh;
+
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 50%;
+    background-color: #f1f1f1;
+    min-height: 30vh;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+ header {
     position: relative;
     background-image: url("./photo.jpg");
+    max-width: 100%;
     background-repeat: none;
     background-size: cover;
     background-position: center;
@@ -11,6 +72,7 @@ header::after {
     position: absolute;
     bottom: 0;
     left: 50%;
+    font-size: 35px;
     transform: translate(-50%, 0);
     color: white;
     font-weight: 700;
@@ -50,20 +112,81 @@ a:active {
     border: 1px solid #000;
     margin: 5px;
     cursor: pointer;
+    font-size: 2vw;
 }
 
 
 #main-title {
-    font: 24px Arial, Helvetica, sans-serif;
+    font: 3vw Arial, Helvetica, sans-serif;
     vertical-align: top;
 }
 
 p[name="first-text"] {
-    font-size: 12px;
+    font-size: 2vw;
     font-family: 'Courier New', Courier, monospace;
 }
     
 p[name="second-text"] {
-    font-size: 10px;
+    font-size: 2vw;
     font-family: 'Courier New', Courier, monospace;
 }
+
+@media (max-width: 1023px) {
+    h2 {
+        font-size: 3vw;
+    }
+    #main-title {
+        font-size: 3vw;
+    }
+
+   
+    header::after {
+        font-size: 3vw;
+    }
+    p[name="first-text"] {
+        font-size: 2vw;
+        font-family: 'Courier New', Courier, monospace;
+    }
+        
+    p[name="second-text"] {
+        font-size: 2vw;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .link {
+        font-size: 4vw;
+    }
+
+}
+
+@media (max-width: 767px) {
+    #main-title {
+        font-size: 6vw;
+    }
+    nav, article {
+        width: 100%;
+        height: auto;
+      }
+      p[name="first-text"] {
+        font-size: 5vw;
+        font-family: 'Courier New', Courier, monospace;
+    }
+        
+    p[name="second-text"] {
+        font-size: 4vw;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .link {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 10vw;
+    }
+   
+    header::after {
+        font-size: 10vw ;
+    }
+}
+
