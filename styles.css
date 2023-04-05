@@ -172,6 +172,7 @@ a {
 }
 
 .page-content {
+    overflow: hidden;
     padding: 5vw 10vw;
 
 }
@@ -179,6 +180,7 @@ a {
     position: relative;
     display: flex;
 }
+
 
 .main-content-left {
     flex: 1;
@@ -190,10 +192,8 @@ a {
 
 .email {
     margin-top: 20px;
-    margin-left: 10px;
     text-align: center;
 }
-
 
 .experience {
     margin-top: 30vh;
@@ -221,13 +221,13 @@ a {
 }
 
 .main-content-center {
-    align-self: center;
     flex: 1;
 }
 
 .main-content-center-photo {
-    width: 20vw;
+    width: 25vw;
 }
+
 
 .main-content-right {
     flex: 1;
@@ -705,7 +705,7 @@ a {
     border-left: 1px solid grey;
 }
 
-.page-content-footer-center {
+.page-footer-center {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -890,10 +890,13 @@ a {
         height: 20px;
     }
 
+    .page-footer-right-text {
+        display: none;
+    }
+
     .social-media-icon {
         width: 10px;
         height: 10px;
-
     }
 
     .topbar-phone-icon {
