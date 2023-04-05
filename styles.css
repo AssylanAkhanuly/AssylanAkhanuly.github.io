@@ -176,6 +176,7 @@ a {
 
 }
 .main-content {
+    position: relative;
     display: flex;
 }
 
@@ -329,7 +330,7 @@ a {
 
 .plate-footer::after{
     position: absolute;
-    width: 25px;
+    width: 20px;
     left: calc(140% + 3px);
     top: calc(50% + 1px);
     border-top: 2px solid var(--red);
@@ -667,6 +668,7 @@ a {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    gap: 15px;
 }
 
 .contact-content-left-footer {
@@ -761,9 +763,9 @@ a {
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
     :root {
-        --primaryFontSize: 20px;
+        --primaryFontSize: 15px;
         --secondaryFontSize: 10px;
         --ternaryFontSize: 8px;
     }
@@ -777,6 +779,8 @@ a {
         height: 3px;
         background-color: var(--white);
         transition: 0.2s;
+        z-index: 101;
+
     }
     
     .topbar-navigation-list-hamburger::after, .topbar-navigation-list-hamburger::before {
@@ -795,6 +799,7 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        z-index: 100;
     }
 
     .topbar-navigation-list.active {
@@ -833,6 +838,37 @@ a {
         display: none;
     }
 
+    .main-content {
+        display: block;
+    }
+
+    .main-content-center-photo {
+        position: absolute;
+        left: min(80%, 300px);
+        top: 0;
+        width: 60vw;
+        max-width:250px;
+        transform: translate(-50%,0%);
+    }
+    .experience {
+        margin-top: 25vh;
+    }
+    .main-content-right {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .research {
+        margin: 0;
+        width: 40px;
+        height: 40px;
+    }
+    .research-text {
+        margin: 0;
+    }
     .secondary-plate {
         padding: 10px 20px;
     }
@@ -843,6 +879,10 @@ a {
     .main-logo {
         width: 30px;
         height: 30px;
+    }
+
+    .main-plates, .secondary-plates {
+        flex-direction: column;
     }
 
     .page-footer-left-logo {
@@ -860,10 +900,8 @@ a {
         width: 20px;
         height: 20px;
     }
-
-    .plate:hover .plate-footer::before{
-        border-color: var(--white);
-        color: var(--white)
+    .best-works-category-list-item-more::after, .best-works-category-list-item-more::before, .plate-footer::after, .plate-footer::before {
+        display: none;
     }
 }
 
