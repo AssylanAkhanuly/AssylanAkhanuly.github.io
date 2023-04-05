@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;500;700&display=swap');
 
 :root {
-    --primaryFontSize: 36px;
+    --primaryFontSize: 32px;
     --secondaryFontSize: 18px;
     --ternaryFontSize: 12px;
 
@@ -107,7 +107,12 @@ a {
     display: flex;
     justify-content: center;
     gap: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: 1s ease;
 }
+
+
 
 .topbar-navigation-list-item {
     font-size: var(--secondaryFontSize);
@@ -166,7 +171,7 @@ a {
 -moz-box-shadow: 0px 0px 17px 0px rgba(215,31,45,0.75);
 }
 
-.home-page-content {
+.page-content {
     padding: 5vw 10vw;
 
 }
@@ -175,7 +180,7 @@ a {
 }
 
 .main-content-left {
-    flex: 2;
+    flex: 1;
 
     display: flex;
     flex-flow: column;
@@ -191,6 +196,7 @@ a {
 
 .experience {
     margin-top: 30vh;
+    position: relative;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -205,12 +211,26 @@ a {
     text-transform: uppercase;
 }
 
+.experience-line {
+    position: absolute;
+    top: 115%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
 .main-content-center {
+    align-self: flex-end;
     flex: 1;
+}
+
+.main-content-center-photo {
+    width: 20vw;
 }
 
 .main-content-right {
     flex: 1;
+    align-self:flex-start;
 }
 
 .research {
@@ -231,7 +251,6 @@ a {
 .research-text {
     margin-top: 15vh;
     text-transform: uppercase;
-    font-size: 24px;
     text-align: center;
 }
 
@@ -483,11 +502,16 @@ a {
 .best-works-content-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
 }
 
 .best-works-category {
     margin-top: 40px;
+}
+
+.best-works-category-header {
+    display: flex;
+    gap: 20px;
 }
 .best-works-category-title {
     color: var(--red);
@@ -634,7 +658,7 @@ a {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    background-image: url('./assets/background.jpg');
+    background-image: url('./images/background.jpg');
     background-repeat: none;
     border-radius: 10px;
 }
@@ -703,5 +727,135 @@ a {
 .red-text {
     color: var(--red);
 }
+
+@media screen and (max-width: 1218px) {
+    :root {
+        --primaryFontSize: 26px;
+        --secondaryFontSize: 12px;
+        --ternaryFontSize: 10px;
+    
+    }
+
+    .main-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .page-footer-left-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-media-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .topbar-phone-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    :root {
+        --primaryFontSize: 20px;
+        --secondaryFontSize: 10px;
+        --ternaryFontSize: 8px;
+    }
+
+    .topbar-navigation-list-hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 35px;
+        width: 20px;
+        height: 3px;
+        background-color: var(--white);
+        transition: 0.2s;
+    }
+    
+    .topbar-navigation-list-hamburger::after, .topbar-navigation-list-hamburger::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 20px;
+        height: 3px;
+        background-color: var(--white);
+        transition: 0.2s;
+    }
+
+    .topbar-navigation-list {
+        position: fixed;
+        inset: 0 0 0 105%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .topbar-navigation-list.active {
+        left: 70%;
+    }
+    
+    .topbar-navigation-list-hamburger::after {
+        top: 5px;
+    }
+    .topbar-navigation-list-hamburger::before {
+        top: -5px;
+    }
+    
+    .topbar-navigation-list-hamburger.active {
+        background: transparent;
+    }
+    
+    .topbar-navigation-list-hamburger.active::after,  .topbar-navigation-list-hamburger.active::before{
+        content: '';
+    
+        width: 20px;
+        height: 3px;
+    
+        background-color: var(--white);
+    }
+    .topbar-navigation-list-hamburger.active::after {
+        transform: rotate(-45deg) ;
+        top: 0px;
+    }
+    .topbar-navigation-list-hamburger.active::before {
+        transform: rotate(45deg);
+        top: 0px;
+    }
+
+    .topbar-phone {
+        display: none;
+    }
+
+
+    .main-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .page-footer-left-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-media-icon {
+        width: 15px;
+        height: 15px;
+
+    }
+
+    .topbar-phone-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+
+
+
+
 
 

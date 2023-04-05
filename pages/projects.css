@@ -1,0 +1,83 @@
+.best-works-category-icon {
+    position: relative;
+    width: 45px;
+    height: 48px;
+}
+.best-works-category-icon-1 {
+    position: absolute;
+    top: calc(100% - 30px);
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    animation: rotationClockwise 2s linear infinite;
+}
+
+.best-works-category-icon-2 {
+    position: absolute;
+    top: 0;
+    left: calc(100% - 25px);
+    width: 25px;
+    height: 25px;
+    animation: rotationCounterclockwise 2s linear infinite;
+}
+
+.best-works-category-icon-3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    animation: rotationCounterclockwise 2s linear infinite;
+}
+
+@keyframes rotationClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+@keyframes rotationCounterclockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+}
+
+@media screen and (max-width: 1218px) {
+  .best-works-category-icon {
+    position: relative;
+    width: 28px;
+    height: 31px;
+}
+.best-works-category-icon-1 {
+    position: absolute;
+    top: calc(100% - 20px);
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    animation: rotationClockwise 2s linear infinite;
+}
+
+.best-works-category-icon-2 {
+    position: absolute;
+    top: 0;
+    left: calc(100% - 15px);
+    width: 15px;
+    height: 15px;
+    animation: rotationCounterclockwise 2s linear infinite;
+}
+
+.best-works-category-icon-3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    animation: rotationCounterclockwise 2s linear infinite;
+}
+}
