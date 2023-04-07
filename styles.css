@@ -85,6 +85,48 @@ a {
 }
 
 
+.fade-in {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+.fade-left {
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.fade-left.active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.fade-right {
+    transform: translate(50%, 0%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.fade-right.active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.fade-bottom {
+    transform: translate(0%, 50%);
+    opacity: 0;
+}
+
+.fade-bottom.active {
+    transform: translate(0%, 0%);
+    opacity: 1;
+    transition: 1s;
+}
+
 .page {
     height: 100vh;
     background-image: radial-gradient(#461519 0%, #111111 50%);
@@ -107,8 +149,7 @@ a {
     display: flex;
     justify-content: center;
     gap: 40px;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    
     transition: 1s ease;
 }
 
@@ -201,6 +242,8 @@ a {
     display: flex;
     gap: 10px;
     align-items: center;
+
+    transition: 1s ease;
 }
 
 .experience-number {
@@ -799,6 +842,9 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
         z-index: 100;
     }
 
