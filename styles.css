@@ -49,8 +49,8 @@ a {
 
 
 .primaryButton {
-    padding: 5px 10px;
-
+    padding: 7px 14px;
+    height: fit-content;
     font-size: var(--secondaryFontSize);
     color: var(--red);
 
@@ -71,7 +71,8 @@ a {
 
 .secondaryButton {
     padding: 5px 10px;
-
+    position: relative;
+    width: 100%;
     font-size: var(--secondaryFontSize);
     color: var(--white);
 
@@ -82,6 +83,22 @@ a {
     -moz-box-shadow: 0px 0px 17px 0px rgba(215,31,45,0.75);
     cursor: pointer;
     transition: 0.2s;
+}
+
+.secondaryButton::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('./images/spider-web.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 0 10px 0 0;
+    z-index: 50;
 }
 
 
@@ -319,11 +336,15 @@ a {
 }
 
 .plate:hover {
-    background-color: var(--red);
+    background-color: black;
+
+    transform: scale(1.03);
+    transition: .5s;
 }
 
-.plate:hover a,  .plate-footer{
+.plate:hover  .plate-footer{
     color: var(--white);
+    transition: 0.2s;
 }
 
 .plate:hover .plate-footer::before{
@@ -571,6 +592,11 @@ a {
 
 .best-works-category-list-item {
     flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
     padding: 10px;
     background-color: var(--black);
     border-radius: 10px;
@@ -582,17 +608,33 @@ a {
     background-color: var(--red);
     transition: 0.2s;
 
+    transform: scale(1.03);
+    transition: .5s;
+
 }
 
 .best-works-category-list-item-img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
 } 
 
 .best-works-category-list-item-more {
     position: relative;
     font-size: var(--ternaryFontSize);
     color: var(--red);
+}
+
+.best-works-category-list-item:hover .best-works-category-list-item-more {
+    color: var(--white);
+    transition: 0.2s;
+}
+
+.best-works-category-list-item:hover .best-works-category-list-item-more::before {
+    border-top: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+}
+.best-works-category-list-item:hover .best-works-category-list-item-more::after {
+    border-top: 2px solid var(--white);
 }
 
 .best-works-category-list-item-more::before{
@@ -641,7 +683,12 @@ a {
   }
 .slider-item {
     position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end !important;
 
+    gap: 20px;
+    align-items: center;
     padding: 40px 20px 20px 20px;
     background-color: var(--black);
     border-radius: 10px;
@@ -664,8 +711,12 @@ a {
     text-align: center;
 }
 
+.slider-item-footer {
+    width: 100%;
+}
+
 .slider-item-hr {
-    margin: 20px 30px;
+    margin: 0 20px;
     border: 1px dashed var(--white);
 }
 
@@ -714,6 +765,10 @@ a {
     gap: 15px;
 }
 
+.contact-content-left-button {
+    width: 100%;
+}
+
 .contact-content-left-footer {
     color: var(--red);
     font-size: var(--primaryFontSize);
@@ -757,9 +812,6 @@ a {
 .social-media-icon {
     width: 20px;
     height: 20px;
-    box-shadow: 0px 0px 17px 0px rgba(215,31,45,0.75);
-    -webkit-box-shadow: 0px 0px 17px 0px rgba(215,31,45,0.75);
-    -moz-box-shadow: 0px 0px 17px 0px rgba(215,31,45,0.75);
     cursor: pointer;
 }
 
@@ -779,6 +831,14 @@ a {
         --secondaryFontSize: 12px;
         --ternaryFontSize: 10px;
     
+    }
+
+    .primaryButton {
+        padding: 5px 10px;
+    }
+    .secondaryButton::before {
+        width: 15px;
+        height: 15px;
     }
 
     .main-logo {
@@ -811,6 +871,11 @@ a {
         --primaryFontSize: 15px;
         --secondaryFontSize: 10px;
         --ternaryFontSize: 8px;
+    }
+
+    .secondaryButton::before {
+        width: 10px;
+        height: 10px;
     }
 
     .topbar-navigation-list-hamburger {
