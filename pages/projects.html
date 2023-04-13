@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./projects.css">
-    <title>Document</title>
+    <link rel="icon" href="../images/spiderman.png">
+    <!--text fill interaction-->
+    <script src="./text-content.js"></script>
+    <title>Projects</title>
 </head>
 <body class="page">
     <div class="topbar">
@@ -41,23 +44,11 @@
                     </div>
                 </div>
                 <ul class="best-works-category-list">
-                    <li class="best-works-category-list-item">
+                    <li class="best-works-category-list-item" 
+                    onclick="fillText('3D Room Webpage', 'The work is a representation of 3-dimensional artistic visualization of a room with some animations. The work will be carried out in Blender and React-three-fiber (Three.js) for building the 3D modelling and embedding with React.js, respectively. There will be some interaction animation with computer, table etc. It is performed to visually show my basic understanding of concepts in Blender, like complex development environment, animation, geometry, and material nodes.')">
                         <img src="../images/works-2.png" alt="work-img" class="best-works-category-list-item-img">
-                        <h2 class="best-works-category-list-item-title">Crypto Currency</h2>
-                        
-                        <a href="#" class="best-works-category-list-item-more">Know More</a>
-                    </li>
-                    <li class="best-works-category-list-item">
-                        <img src="../images/work-1.jpg" alt="work-img" class="best-works-category-list-item-img">
-                        <h2 class="best-works-category-list-item-title">Crypto Currency</h2>
-                        
-                        <a href="#" class="best-works-category-list-item-more">Know More</a>
-                    </li>
-                    <li class="best-works-category-list-item">
-                        <img src="../images/work-1.jpg" alt="work-img" class="best-works-category-list-item-img">
-                        <h2 class="best-works-category-list-item-title">Crypto Currency</h2>
-                        
-                        <a href="#" class="best-works-category-list-item-more">Know More</a>
+                        <h2 class="best-works-category-list-item-title">3D Room Webpage</h2>
+                        <a class="best-works-category-list-item-more">Know More</a>
                     </li>
                 </ul>
             </div>
@@ -68,32 +59,26 @@
                         <h2 class="best-works-category-title">Last Projects</h2>
                     </div>
                     <ul class="best-works-category-list">
-                        <a href="#">
-                            <li class="best-works-category-list-item">
-                                <img src="../images/works-1.jpg" alt="work-img" class="best-works-category-list-item-img">
-                                <h2 class="best-works-category-list-item-title">OPTI Well Web Application</h2>
-                                
-                                <a href="#" class="best-works-category-list-item-more">Know More</a>
-                            </li>
-                        </a>
-                        <a href="#">
-                            <li class="best-works-category-list-item">
-                                <img src="../images/works-3.png" alt="work-img" class="best-works-category-list-item-img">
-                                <h2 class="best-works-category-list-item-title">OPTI Drill Web Application</h2>
-                                
-                                <a href="#" class="best-works-category-list-item-more">Know More</a>
-                            </li>
-                        </a>
-                        
-                        <a href="#">
-                            <li class="best-works-category-list-item">
-                                <img src="../images/works-3.png" alt="work-img" class="best-works-category-list-item-img">
-                                <h2 class="best-works-category-list-item-title">OPTI Well Web Application</h2>
-                                
-                                <a href="#" class="best-works-category-list-item-more">Know More</a>
-                            </li>
-                        </a>
-                        
+                        <li class="best-works-category-list-item"
+                        onclick="fillText('OPTI Well Web Application', 'There, I developed web applications using React.js library for KarazhanbasMunay, where it allow managers and engineers to view a company’s oil management and production processes in real-time, as well as its variation history. This is one of main digital transformation projects is application for a subsidiary of National Oil Company KazMunayGas. The project includes real-time monitoring to handle huge amount of data with +3000 oil wells in the West Kazakhstan, and I successfully managed to build optimized interface for end-users.')">
+                            <img src="../images/works-1.jpg" alt="work-img" class="best-works-category-list-item-img">
+                            <h2 class="best-works-category-list-item-title">OPTI Well Web Application</h2>
+                            
+                            <a class="best-works-category-list-item-more">Know More</a>
+                        </li>
+                        <li class="best-works-category-list-item"
+                        onclick="fillText('OPTI Drill Web Application', 'It is one of the web application developed during my experience in MANUL Company. There, I developed web applications using React.js library, where it allow managers and engineers to view a company’s drilling management in real-time, as well as its variation history. The application included the real-time tracking of each drilling equipment using GPS, its production rate, and visualization of main KPI.  ')">
+                            <img src="../images/works-3.png" alt="work-img" class="best-works-category-list-item-img">
+                            <h2 class="best-works-category-list-item-title">OPTI Drill Web Application</h2>
+                            
+                            <a href="#" class="best-works-category-list-item-more">Know More</a>
+                        </li>
+                        <li class="best-works-category-list-item"
+                        onclick="fillText('OPTI Well Desktop Application', 'The desktop application provides the tracking system for different types of oil reservours (horizontal steel tanks, vertical steel tanks, and flowmeter). The application is equipped with updating data in real-time, viewing history data, edit data, submtion of data to government database (egov) using electronic digital signature, and user control functionalities. The application was build using WPF (C# and XAML), MVVM pattern, and Devexpress library extention.')">
+                            <img src="../images/desktop-app.png" alt="work-img" class="best-works-category-list-item-img">
+                            <h2 class="best-works-category-list-item-title">OPTI Well Desktop Application</h2>
+                            <a href="#" class="best-works-category-list-item-more">Know More</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -103,7 +88,7 @@
                         <h2 class="best-works-category-title">Publications</h2>
                     </div>
                     <ul class="best-works-category-list">
-                        <a href="#">
+                        <a href="https://iopscience.iop.org/article/10.1088/2058-8585/ac8753/meta">
                             <li class="best-works-category-list-item">
                                 <img src="../images/publication-1.png" alt="work-img" class="best-works-category-list-item-img">
                                 <h2 class="best-works-category-list-item-title">Passivation of perovskite layer surface states with pyridine in flexible and printed perovskite solar cells</h2>
@@ -111,7 +96,7 @@
                                 <a href="#" class="best-works-category-list-item-more">Know More</a>
                             </li>
                         </a>
-                        <a href="#">
+                        <a href="https://journals.aps.org/prapplied/accepted/5c073A53Kce18d01c41716c1c25c27e8ea64b5621">
                             <li class="best-works-category-list-item">
                                 <img src="../images/publication-2.png" alt="work-img" class="best-works-category-list-item-img">
                                 <h2 class="best-works-category-list-item-title">Modeling and comparative performance analysis of perovskite solar 
@@ -135,6 +120,12 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="story-content">
+            <div class="story-content-header">
+                <h1 id="text-title" class="story-content-header-title"></h1>
+            </div>
+            <p id="text-desc" class="story-content-desc"></p>
         </div>
     </div>
 
