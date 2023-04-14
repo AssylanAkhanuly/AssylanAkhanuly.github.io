@@ -1020,6 +1020,10 @@ a {
         height: 30px;
     }
 
+    .main-plates {
+        display: flex;
+    }
+
     .main-plates, .secondary-plates {
         flex-direction: column;
     }
