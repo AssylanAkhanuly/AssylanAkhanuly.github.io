@@ -1,0 +1,1 @@
+// The functionalities are divided into 4 separate files in ./resources directory
